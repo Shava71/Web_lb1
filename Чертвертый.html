@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Четвертый</title>
+</head>
+<body>
+    <h1>Форма ввода данных</h1>
+    <form action="#" method="post">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="city">Выберите ваш город:</label>
+        <select id="city" name="city">
+            <option value="Москва">Москва</option>
+            <option value="Санкт-Петербург">Санкт-Петербург</option>
+            <option value="Новосибирск">Новосибирск</option>
+        </select><br><br>
+
+        <label>Ваш пол:</label>
+        <input type="radio" id="male" name="gender" value="male" required> Мужской
+        <input type="radio" id="female" name="gender" value="female"> Женский<br><br>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <ul>
+        <li><a href="Первый.html">Страница 1</a></li>
+        <li><a href="Второй.html">Страница 2</a></li>
+        <li><a href="Третий.html">Страница 3</a></li>
+    </ul>
+</body>
+<style>
+    form {
+        margin-top: 20px;
+    }
+    label {
+        font-size: 14px;
+        color: #333;
+    }
+    input, select {
+        margin: 5px 0;
+        padding: 5px;
+    }
+    button {
+        padding: 10px 15px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</html>
