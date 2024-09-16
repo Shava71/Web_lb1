@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookchum</title>
+</head>
+<body>
+    <header>
+        <div id="AnimeWeb">  <!--тутова должен быть наш логотип, но у нас нет ни ручек, ни дизайнера :(   -->
+            <div class="menu-block">
+            <div id="fold"><img src="/styles/menu.png" alt="" class="menu-image">
+                <nav class="menu">
+                    <a href="/Пятый.html">Главная</a>
+                    <a href="#audio">Аудио</a>
+                    <a href="#comics">Комиксы</a>
+                    <a href="#atricles">Статьи</a>
+                </nav> 
+            </div></div>
+            <div class="Logo">
+                <a href="/Пятый.html" class="logo-link"><img src="/styles/sidenav/book-svgrepo-com.svg" alt="" class="logo-image">BookChum</a>
+            </div>
+            <!-- <div class="login-buttons">
+                <a href="/login.html" class="login-button">Войти</a>
+                <button class="register-button">Зарегистрироваться</button>
+            </div> -->
+        </div>
+    </header>
+    
+    
+    <div class="content">
+        <div class="Top3-text">
+            <h1>Топ 3 книги недели</h1>
+        </div>
+        <p class="underTop3-text">Стоит взять</p>
+        <div class="Books-row">
+            <img src="/books-image/book1.webp" alt="Book 1" class="books">
+            <img src="/books-image/book2.webp" alt="Book 2" class="books">
+            <img src="/books-image/book3.webp" alt="Book 3" class="books">
+        </div>
+    </div>
+    
+
+    <ul class="quotes-tags">
+    
+        <li>Великие цитаты из книг:
+            <ul>
+                <li>«Никому не рассказывать о бойцовском клубе» - Чак Паланик «Бойцовский клуб» </li>
+                <li>"Если вы хотите жить счастливой жизнью, привяжите ее к цели, а не к людям или вещам" - Альберт Эйнштейн</li>
+                <li>"Более полная жизнь не у того, кто прожил дольше, а у того, кто больше узнал" - Жан-Жак Руссо</li>
+                <li>"Тишина — источник великой силы" - Лао-цзы</li>
+               
+            </ul>
+        </li>
+    </ul>
+
+    <div class="event">
+        <h1 class="event-text">Мероприятия</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Название мероприятия</th>
+                <th>Дата и время</th>
+                <th>Место проведения</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Встреча с Пушкиным</td>
+                <td>01.10.2024, 18:00</td>
+                <td>Читальный зал</td>
+                <td>Встреча с известным автором стихов</td>
+            </tr>
+            <tr>
+                <td>Дебаты о лучшей фантастике 21 века</td>
+                <td>12.10.2024, 17:30</td>
+                <td>Концертный зал Тульского государственного университета</td>
+                <td>Самая лучшая фантастика 21 века</td>
+            </tr>
+            <!-- Другие мероприятия -->
+        </tbody>
+    </table>
+</div>
+
+    <div class="eventRegistration">
+        <h1 class="eventRegistration-text">Регистрация на мероприятие</h1>
+    <form action="#" method="post">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="eventValue">Выберите мероприятие:</label>
+        <select id="eventValue" name="eventValue">
+            <option value="1">Встреча с Пушкиным</option>
+            <option value="2">Дебаты о лучшей фантастике 21 века</option>
+        </select><br><br>
+
+        <label>Ваш пол:</label>
+        <input type="radio" id="male" name="gender" value="male" required> Мужской
+        <input type="radio" id="female" name="gender" value="female"> Женский<br><br>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    </div>
+    <footer>
+        <p>Сделано студентом гр. 220621 Ериковым И.И.</p>
+    </footer>
+
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    /* background: url("/picture/i.png") no-repeat center center fixed; */
+    color: white;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding-top: 5%;
+}
+
+
+
+/* Стиль для изображений */
+.books {
+    width: 200px; /* Размер изображений */
+    height: auto;
+    margin-bottom: 30px;
+}
+.Top3-text, .event-text, .eventRegistration-text{
+    font-size: 24px; /* Размер текста */
+    /* font-family: cursive; */
+    color: gray;
+    text-align: center;
+    margin-bottom: 30px; /* Отступ между текстом и изображениями */
+    margin-top: 30px;
+}
+.underTop3-text{
+    color: gray;
+    text-align: center;
+    margin-top: -20px;
+    font-size: 30px;
+}
+
+.Books-row {
+            display: flex;
+            justify-content: center; /* Центрирование изображений по горизонтали */
+            gap: 20px; /* Отступ между изображениями */
+}
+
+content {
+    text-align: center;}
+
+
+
+
+
+#AnimeWeb {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    background-color: whitesmoke;
+    border-bottom: gray 5px;
+
+    display: flex;
+    
+    align-items: center; 
+   
+    height: 60px;
+    justify-content: center; 
+    
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px; /* Отступы внутри header */
+    
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Цвет текста и логотипа изменен на черный для лучшего контраста */
+.logo-link {
+    display: flex;
+    align-items: center;
+    color: black; /* Цвет текста теперь черный */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 24px; /* Размер текста */
+    /* font-family: cursive; */
+    color: gray;
+}
+
+/* Цвет иконки книги */
+.logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px; /* Отступ между иконкой и текстом */
+    filter: grayscale(100%) brightness(50%);
+}
+
+/* Цвет текста для hover эффекта */
+.logo-link:hover {
+    /* sbackground-color: rgba(0, 0, 0, 0.25); */
+    color: rgba(0, 0, 0, 0.25);
+}
+
+/* .Logo img {
+    width: 60px; 
+    filter: grayscale(100%) brightness(50%);
+    margin-left: 60px;
+} 
+*/
+
+.event table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        border-collapse: separate; /* Это важно для применения border-radius */
+    border-spacing: 0; /* Убираем отступы между ячейками */
+    border-radius: 10px; /* Добавляем border-radius к таблице */
+    overflow: hidden; /* Убираем переполнение */
+    max-width: 600px;
+        
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        color: gray;
+    }
+    th {
+        background-color: #f4f4f4;
+    }
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+.eventRegistration{
+    margin-top: 20px;
+    background-color:#f5f5f5;
+    border-radius: 25px;
+    width: 600px;
+}
+.eventRegistration form {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: gray;
+        text-align: center;
+        justify-content: center;
+        font-size: 24px;
+        
+    }
+    label {
+        font-size: 24px;
+        color: gray;
+    }
+    input, select {
+        margin: 5px 0;
+        padding: 5px;
+    }
+    button {
+        padding: 10px 15px;
+        background-color: gray;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+
+
+    .quotes-tags {
+    background-color: #f0f0f0; 
+    border-radius: 8px; /* Скругление углов блока */
+    color: gray; /*  цвет текста */
+    max-width: 600px; /* Ограничиваем ширину блока для лучшего отображения */
+    margin: 20px auto; /* Центрируем блок по горизонтали */
+}
+
+.quotes-tags li {
+    margin-bottom: 10px; /* Отступ между элементами списка */
+    padding: 10px; /* Внутренние отступы для элементов списка */
+    background-color:#f5f5f5;
+    border-radius: 4px; /* Скругление углов элемента списка */
+    border: 1px solid #ddd; /* Легкая граница для элементов списка */
+    font-size: 20px; 
+    
+}
+
+.quotes-tags li ul {
+    padding-left: 20px; /* Отступ слева для вложенного списка */
+    padding-top: 10px;
+}
+
+
+
+
+/* Icon sidenav - sidenav.closed */
+#fold {
+    position: fixed;
+    left: 0px;
+    color: grey;
+    z-index: 2;
+    position: fixed;
+    border: 2px solid rgba(255, 255, 255, .2);
+    background-color: rgba(0, 0, 0, 0.15);
+    top: 0;
+    padding: 13px;
+    /* border-radius: 15px; */
+    display: flex;
+    cursor: pointer;
+    .menu-image{
+        background: none;
+        width: 30px;
+        height: 30px;
+        margin-top: 1px;
+        filter: grayscale(100%) brightness(50%);
+    }
+}
+
+#fold:hover {
+    background-color: rgba(0, 0, 0, 0.25); 
+    
+}
+
+
+.menu-block {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+.menu-image {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(100%) brightness(50%);
+    cursor: pointer;
+    transition: filter 0.3s ease; 
+}
+
+.menu-image:hover {
+    filter: grayscale(0%) brightness(100%);
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px; 
+    left: 0;
+    background-color: rgba(245, 245, 245, 0.9); 
+    backdrop-filter: blur(10px); 
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+    transition: opacity 0.3s ease; 
+}
+
+.menu-block:hover .menu {
+    display: block;
+    opacity: 1; 
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: gray; 
+    text-decoration: none;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.menu a:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
+    color: black;
+}
+
+
+
+.container{
+    max-width: 1200px;
+    width: 95%;
+    padding-top: 80px;
+}
+
+.image-info h3,
+.image-info p,
+.image-info hr.separator {
+    color: white; /* Задайте цвет текста, который вы хотите использовать */
+}
+
+.container h1{
+    text-align: center;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    /* width: 50%; */
+}
+
+
+
+
+    footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    color: gray;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    z-index: 1000; /* Убедитесь, что футер находится поверх других элементов */
+    }
+    body {
+    padding-bottom: 50px; /* Отступ для футера */
+}
+
+    </style>
+<script src="/script/sidenav.js"></script>
+</body>
+</html>
