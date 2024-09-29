@@ -1,0 +1,57 @@
+
+
+/* Основной контейнер */
+.container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 50px auto;
+    color: gray;
+}
+
+/* Стиль заголовков */
+.container h1, .container h2 {
+    text-align: center;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+/* Разделитель */
+.separator {
+    border: 0;
+    height: 2px;
+    background: gray;
+    margin: 20px 0;
+}
+
+/* Основной текст */
+.about-content p {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+/* Блок с изображением библиотеки */
+.library-image {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.library-image .image-item {
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    border: 3px solid lightgrey;
+}
+
+/* Контактная информация */
+.contact-section {
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+}

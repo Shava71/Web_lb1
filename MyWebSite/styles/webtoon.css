@@ -1,0 +1,125 @@
+.container{
+    max-width: 1200px;
+    width: 95%;
+    /* padding-top: 80px; */
+    color: gray;    
+}
+.separator{
+    color: gray;
+}
+
+.image-info h3,
+.image-info p,
+.image-info hr.separator {
+    color: gray; /* Задайте цвет текста, который вы хотите использовать */
+}
+
+.container h1{
+    text-align: center;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    /* width: 50%; */
+}
+
+.slider-wrapper{
+    position: relative;
+    background-color: whitesmoke;
+    
+}
+
+.slider-wrapper .slide-button{
+    position: absolute;
+    top: 50%; 
+    height: 75px;
+    width: 50px;
+    color: #fff;
+    background: #000;
+    border-radius: 15px;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover{
+    background: #444;
+}
+
+.slider-wrapper .slide-button#prev-slide{
+    left: -20px;
+    display: none;
+}
+.slider-wrapper .slide-button#next-slide{
+    right: -20px;
+}
+
+.slider-wrapper .image-list{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(10, 1fr);
+    /* padding-top: 30px; */
+    /* font-size: 0; */
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-bottom: 30px;
+    background-color: #fff
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar{
+    display: none;
+
+}
+
+.slider-wrapper .image-list .image-item{
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+.container .slider-scrollbar{
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 2px solid lightgrey ;
+    /* backdrop-filter: blur(20px); */
+    border-radius: 15px;
+}
+.slider-scrollbar .scrollbar-track{
+    height: 2px;
+    width: 100%;
+    background: lightgray;
+    border-radius: 15px;
+    position: relative;
+}
+.slider-scrollbar:hover .scrollbar-track{
+    height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: gray;;
+    border-radius: inherit;
+    cursor: grab;
+}
+.slider-scrollbar .scrollbar-thumb:active{
+    cursor: grabbing;
+    height: 8px;
+    top:-2px;
+    
+}
+.slider-scrollbar .scrollbar-thumb::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:-10px;
+    bottom: -10px    ;
+}

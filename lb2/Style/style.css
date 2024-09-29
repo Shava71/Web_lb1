@@ -1,0 +1,24 @@
+
+p {
+    color: red; 
+    background-color: lightblue; 
+    border: 3px solid black; 
+    padding: 10px;
+}
+
+#first {
+    color: cornflowerblue; 
+    background-color: lightpink;
+    border: 2px solid cadetblue; 
+}
+#second, #third {
+    color: green; 
+    background-color: lightgreen; 
+    border: 10px solid darkgrey; 
+}
+
+div {
+    display:inline-block;
+    width: 35%; 
+    vertical-align: top; 
+}
