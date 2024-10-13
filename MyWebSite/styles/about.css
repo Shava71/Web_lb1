@@ -1,57 +1,31 @@
-
-
-/* Основной контейнер */
-.container {
-    max-width: 1200px;
-    width: 95%;
-    margin: 50px auto;
-    color: gray;
+.sidenav {
+    width: 280px;
+    height: 100vh; /* Растягиваем меню на всю высоту страницы */
+    transition: width 0.3s, font-size 0.3s;
 }
 
-/* Стиль заголовков */
-.container h1, .container h2 {
-    text-align: center;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(20px);
-    border-radius: 15px;
-    padding: 15px;
-    margin-bottom: 30px;
+/* При сворачивании меню */
+.sidenav.collapsed {
+    width: 80px;
 }
 
-/* Разделитель */
-.separator {
-    border: 0;
-    height: 2px;
-    background: gray;
-    margin: 20px 0;
+.sidenav.collapsed .nav-link span {
+    display: none; /* Скрываем текст, оставляем только иконки */
 }
 
-/* Основной текст */
-.about-content p {
-    margin: 20px 0;
-    line-height: 1.6;
+.sidenav.collapsed .nav-link {
+    text-align: center; /* Центрируем иконки */
 }
 
-/* Блок с изображением библиотеки */
-.library-image {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
+/* Контент, который растягивается при сворачивании */
+.content {
+    flex-grow: 1;
 }
 
-.library-image .image-item {
-    width: 80%;
-    height: auto;
-    border-radius: 15px;
-    border: 3px solid lightgrey;
+.header {
+    padding: 0.5rem 1rem;
 }
 
-/* Контактная информация */
-.contact-section {
-    text-align: center;
-}
-
-.contact-section p {
-    font-size: 1.1rem;
+.header .btn {
+    padding: 0.25rem 0.5rem;
 }

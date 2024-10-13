@@ -1,125 +1,59 @@
-.container{
-    max-width: 1200px;
-    width: 95%;
-    /* padding-top: 80px; */
-    color: gray;    
-}
-.separator{
-    color: gray;
-}
-
-.image-info h3,
-.image-info p,
-.image-info hr.separator {
-    color: gray; /* Задайте цвет текста, который вы хотите использовать */
-}
-
-.container h1{
-    text-align: center;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(20px);
-    border-radius: 15px;
-    /* width: 50%; */
-}
-
-.slider-wrapper{
-    position: relative;
-    background-color: whitesmoke;
-    
-}
-
-.slider-wrapper .slide-button{
-    position: absolute;
-    top: 50%; 
-    height: 75px;
-    width: 50px;
-    color: #fff;
-    background: #000;
-    border-radius: 15px;
-    font-size: 2.2rem;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transform: translateY(-50%);
-}
-
-.slider-wrapper .slide-button:hover{
-    background: #444;
-}
-
-.slider-wrapper .slide-button#prev-slide{
-    left: -20px;
-    display: none;
-}
-.slider-wrapper .slide-button#next-slide{
-    right: -20px;
-}
-
-.slider-wrapper .image-list{
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(10, 1fr);
-    /* padding-top: 30px; */
-    /* font-size: 0; */
-    overflow-x: auto;
-    scrollbar-width: none;
-    margin-bottom: 30px;
-    background-color: #fff
-}
-
-.slider-wrapper .image-list::-webkit-scrollbar{
-    display: none;
-
-}
-
-.slider-wrapper .image-list .image-item{
-    width: 250px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 15px;
-    background-color: transparent;
-}
-
-.container .slider-scrollbar{
-    height: 24px;
+.image-item {
     width: 100%;
+    height: 500px; /* Задайте желаемую высоту */
+    object-fit: cover; /* Это свойство поможет сохранить пропорции */
+    border-radius: 15px;
+}
+.image-info{
+    color: black;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 40%;
+    
+    width: 50px; /* Увеличьте ширину кнопок */
+    height: 75px; /* Увеличьте высоту кнопок */
+    background-color: gray; /* Полупрозрачный белый фон */
+    
+    border-radius: 15%; /* Кнопки круглые */
     display: flex;
+    justify-content: center;
     align-items: center;
-    border: 2px solid lightgrey ;
-    /* backdrop-filter: blur(20px); */
-    border-radius: 15px;
-}
-.slider-scrollbar .scrollbar-track{
-    height: 2px;
-    width: 100%;
-    background: lightgray;
-    border-radius: 15px;
-    position: relative;
-}
-.slider-scrollbar:hover .scrollbar-track{
-    height: 4px;
 }
 
-.slider-scrollbar .scrollbar-thumb{
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    background: gray;;
-    border-radius: inherit;
-    cursor: grab;
+
+
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: darkgray; /* Меняем фон при наведении */
 }
-.slider-scrollbar .scrollbar-thumb:active{
-    cursor: grabbing;
-    height: 8px;
-    top:-2px;
-    
+
+
+
+.image-item {
+    width: 100%; /* Ширина изображения */
+    height: auto; /* Автоматическая высота */
 }
-.slider-scrollbar .scrollbar-thumb::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top:-10px;
-    bottom: -10px    ;
+
+/* Меньшие экраны */
+@media (max-width: 575.98px) {
+    .col-3 {
+        flex: 0 0 50%; /* 2 элемента на маленьких экранах */
+    }
+}
+
+/* Средние экраны */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .col-3 {
+        flex: 0 0 33.33%; /* 3 элемента на средних экранах */
+    }
+}
+
+/* Большие экраны */
+@media (min-width: 768px) {
+    .col-3 {
+        flex: 0 0 25%; /* 4 элемента на больших экранах */
+    }
 }

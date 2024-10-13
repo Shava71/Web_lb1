@@ -1,303 +1,95 @@
-*{
-    padding: 0;
-    margin: 0;
-    
-}
-
-body{
-    /* background: url("/picture/i.png") no-repeat center center fixed; */
-    color: white;
-    
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    flex-direction: column;
-    padding-top: 30px;
-    font-family: Arial, sans-serif;
-}
-
-#BookChum {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
-
-header{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    z-index: 1000;
-    background-color: whitesmoke;
-    border-bottom: gray 5px;
-
-    display: flex;
-    
-    align-items: center; 
-   
-    height: 60px;
-    justify-content: center; 
-    
-    border-bottom: 1px solid #ddd;
-    padding: 0 20px; /* Отступы внутри header */
-    
-}
-
-.Logo {
-    display: flex;
-    align-items: center;
-}
-
-/* Цвет текста и логотипа изменен на черный для лучшего контраста */
-.logo-link {
-    display: flex;
-    align-items: center;
-    color: black; /* Цвет текста теперь черный */
-    text-decoration: none; /* Убираем подчеркивание */
-    font-size: 24px; /* Размер текста */
-    /* font-family: cursive; */
-    color: gray;
-}
-
-/* Цвет иконки книги */
-.logo-image {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px; /* Отступ между иконкой и текстом */
-    filter: grayscale(100%) brightness(50%);
-}
-
-/* Цвет текста для hover эффекта */
-.logo-link:hover {
-    /* sbackground-color: rgba(0, 0, 0, 0.25); */
-    color: rgba(0, 0, 0, 0.25);
-}
-
-/* .Logo img {
-    width: 60px; 
-    filter: grayscale(100%) brightness(50%);
-    margin-left: 60px;
-} 
-*/
-
-/* Icon sidenav - sidenav.closed */
-#fold {
-    position: fixed;
-    left: 0px;
-    color: grey;
-    z-index: 2;
-    position: fixed;
-    border: 2px solid rgba(255, 255, 255, .2);
-    background-color: rgba(0, 0, 0, 0.15);
-    top: 0;
-    padding: 13px;
-    /* border-radius: 15px; */
-    display: flex;
-    cursor: pointer;
-    .menu-image{
-        background: none;
-        width: 30px;
-        height: 30px;
-        margin-top: 1px;
-        filter: grayscale(100%) brightness(50%);
-    }
-}
-
-#fold:hover {
-    background-color: rgba(0, 0, 0, 0.25); /* Затемнение при наведении */
-    
-}
-
-.login-buttons {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-.login-button,
-.register-button {
-    margin-left: 10px;
-    padding: 5px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.login-button {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.register-button {
-    background-color: #008CBA;
-    color: white;
-}
-
-
-
-
-
-
-
-
-
-/* Fixed sidenav, full height */
 .sidenav {
-    margin-top: 60px;
-    height: 100%;
-    width: 165px;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background: transparent;
-    /* border: 2px solid rgba(255, 255, 255, .2); */
-    border-top: 0px;
-    border-left: 0px;
-    /* backdrop-filter: blur(20px); */
-    background-color: whitesmoke;
-   
-    overflow-x: hidden;
-    /* padding-top: 50px; */
-    position: fixed;
-    transition: width 0.5s ease-in-out, padding-left 0.5s ease-in-out;
+    width: 250px;
+    height: 100vh; 
+    transition: width 0.3s, font-size 0.3s;
+    top: 50px;
+}
+
+.sidenav.open {
+    display: block;
+    width: 100%; /* Занимает всю ширину экрана на мобильных устройствах */
+}
+
+.sidenav.collapsed {
+    width: 120px;
+}
+
+.sidenav.collapsed .nav-link span {
+    display: none; /* Скрываем текст, оставляем только иконки */
+}
+
+.sidenav.collapsed .nav-link {
+    text-align: center; /* Центрируем иконки */
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.header {
+    padding: 0.5rem 1rem;
+}
+
+.header .btn {
+    padding: 0.25rem 0.5rem;
+}
+
+/* Новый стиль для кнопок */
+.btn-white {
+    color: black; /* Цвет текста */
+    transition: background-color 0.3s; /* Плавный переход */
+}
+
+.btn-white:hover {
+    background-color: #f0f0f0; /* Легкое затемнение при наведении */
+    color: black;
+}
+
+.btn-active {
+    background-color: #d9d9d9; /* Светло-серый цвет для активной кнопки */
+    color: black;
+}
+
+/* Стили для ссылок в sidenav */
+.nav-link {
+    display: block; /* Стилизация как кнопка */
+    padding: 10px; /* Отступы для кнопок */
+    border-radius: 0.25rem; /* Закругленные углы */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.nav-item {
+    margin-bottom: 5px; /* Устанавливаем маленький отступ между кнопками */
+}
+
+@media (min-width: 992px) {
+    .sidenav {
+        width: 250px;
+        transition: width 0.3s;
+        top: 56px;
     }
-    
-.home-image, .Audio-image, .Webtoon-image, .Article-image{
-    height: 30px;
-    width: 30px;
-    position:relative;
-    vertical-align:middle;
-    
-    filter: grayscale(100%) brightness(50%);
-}
-
-
-.home-text, .Audio-text, .Webtoon-text, .Article-text{
-    position:relative;
-    vertical-align: middle;
-    color: gray;
-}
-
-    .sidenav-closed {
-        width: 60px;
+    .sidenav.collapsed {
+        width: 110px;
+    }
+    .sidenav ul {
         padding-left: 0;
-        overflow: hidden;
-        transition: width 0.5s ease-in-out, padding-left 0.5s ease-in-out;
-       
-      }
-      
-    .sidenav-closed .home-text, 
-    .sidenav-closed .Audio-text,
-    .sidenav-closed .Webtoon-text,
-    .sidenav-closed .Article-text
-    {
-        /* display: none; */
-       
-        position:flex;
-        font-size: 70%;
-        margin-left: -44px;
+    }
+    .sidenav.collapsed ul .nav-link {
         text-align: center;
-        margin-top: 30px;
+        padding-left: 0;
+    }
+    .sidenav.collapsed ul .nav-link img {
+        margin-right: 0;
+    }
+}
 
-        
+@media (max-width: 992px) {
+    .sidenav {
+        left: -250px; /* Скрыто по умолчанию */
+        transition: left 0.3s ease; /* Плавная анимация */
+        top:56px;
     }
-
-    /* Style the sidenav links and the dropdown button */
-    .sidenav a, .dropdown-btn {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    display: flex;
-    border: none;
-    background: none;
-    width:100%;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
+    .sidenav.open {
+        left: 0; /* Выдвигаем меню на мобильных устройствах */
     }
-    
-    /* On mouse-over */
-    .sidenav a:hover, .dropdown-btn:hover {
-        /* color: #f1f1f1; */
-        background-color: rgba(0, 0, 0, 0.25);
-        }
-    
-    /* Main content */
-    .main {
-    margin-left: 200px; /* Same as the width of the sidenav */
-    font-size: 20px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
-    }
-    
-    /* Add an active class to the active dropdown button */
-    .active {
-    background-color: rgba(0, 0, 0, 0.25);
-    color: white;
-    }
-    
-    /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-    .dropdown-container {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.23);
-    /* padding-left: 8px; */
-    }
-    
-    /* Optional: Style the caret down icon */
-    .fa-caret-down {
-    float: right;
-    padding-right: 29px;
-    }
-    .theme-menu{
-        position: fixed;
-        bottom: 0;
-        margin-bottom: 70px;
-        margin-left: 7px;
-        justify-content: space-between;
-
-    }
-    .theme-menu button{
-        width: 40px;
-        height: 40px;
-        border: 2px solid rgba(255, 255, 255, .2);
-        
-        backdrop-filter: blur(20px);
-        cursor: pointer;
-        border-radius: 15px;
-        
-    }
-    .city-fone{
-        background-image: url("city-fone.jpeg");
-        background-size: cover;
-    }
-    .streat-fone{
-        background-image: url("streat-fone.jpg");
-        background-size: cover;
-    }
-    .samurai-fone{
-        background-image: url("samurai-fone.jpg");
-        background-size: cover;
-    }
-
-    footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: whitesmoke;
-    color: gray;
-    text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #ddd;
-    z-index: 1000; /* Убедитесь, что футер находится поверх других элементов */
-    }
-    body {
-    padding-bottom: 50px; /* Отступ для футера */
 }

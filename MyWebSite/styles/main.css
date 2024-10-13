@@ -1,4 +1,4 @@
-
+/*  */
 .books {
     width: 200px; 
     height: auto;
@@ -11,117 +11,29 @@
     transform: scale(1.2);
 }
 
-.Top3-text, .event-text, .eventRegistration-text{
-    font-size: 24px; 
-    /* font-family: cursive; */
-    color: gray;
-    text-align: center;
-    margin-bottom: 30px; 
-    margin-top: 30px;
-    
+.btn-primary:focus {
+    outline: none !important; /* Удаление обводки при фокусе */
+    box-shadow: none !important; /* Удаление теней при фокусе */
 }
-.underTop3-text{
-    color: gray;
-    text-align: center;
-    margin-top: -20px;
-    font-size: 30px;
+
+
+
+.bg-light-grey {
+    background-color: lightgray;
     
 }
 
-.Books-row {
-            display: flex;
-            justify-content: center; 
-            gap: 20px;
-            
-            -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none;
-}
-
-content {
-    text-align: center;
-    -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none;
+.custom-margin {
+    margin-bottom: 50px; /* Укажите нужное значение отступа */
 }
 
 
-.event table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-        border-collapse: separate;
-    border-spacing: 0; 
-    border-radius: 10px; 
-    overflow: hidden; 
-    max-width: 600px;
-        
-    }
-    th, td {
-        padding: 10px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-        color: gray;
-    }
-    th {
-        background-color: #f4f4f4;
-    }
-    tr:hover {
-        background-color: #f5f5f5;
-    }
-
-.eventRegistration{
-    margin-top: 20px;
-    background-color:#f5f5f5;
-    border-radius: 25px;
-    width: 600px;
-}
-.eventRegistration form {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        color: gray;
-        text-align: center;
-        justify-content: center;
-        font-size: 24px;
-        
-    }
-    label {
-        font-size: 24px;
-        color: gray;
-    }
-    input, select {
-        margin: 5px 0;
+@media (max-width: 768px) {
+    .table th, .table td {
+        font-size: 10px;
         padding: 5px;
     }
-    button {
-        padding: 10px 15px;
-        background-color: gray;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-
-    .quotes{
-        text-align: center;
-    }
-    .quotes-tags {
-    
-    
-    background-color: #f0f0f0; 
-    border-radius: 8px; 
-    color: gray;
-    max-width: 600px;
-    margin: 20px auto; 
-}
-
-.quotes-tags li {
-    margin-bottom: 10px; 
-    padding: 10px; 
-    background-color:#f5f5f5;
-    border-radius: 4px; 
-    border: 1px solid #ddd; 
-    font-size: 20px; 
-    
-}
-
-.quotes-tags li ul {
-    padding-left: 20px; 
-    padding-top: 10px;
+    /* .table td:nth-child(4), .table th:nth-child(4) {
+        display: none;
+    } */
 }
