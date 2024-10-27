@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета сотрудника</title>
+</head>
+<body>
+    <h1>Анкета сотрудника</h1>
+    
+    <form id="employeeForm">
+        <!-- <label for="birthPlace">Место рождения (МР):</label>
+        <input type="text" id="birthPlace" name="birthPlace" required><br><br> -->
+<!-- 
+        <label for="nationality">Национальность (НАЦ):</label>
+        <input type="text" id="nationality" name="nationality" required><br><br> -->
+<!-- 
+        <label for="education">Образование (ОБР):</label>
+        <input type="text" id="education" name="education" required><br><br> -->
+<!-- 
+        <label for="birthDate">Дата рождения (ДР):</label>
+        <input type="date" id="birthDate" name="birthDate" required><br><br> -->
+
+        <label for="maritalStatus">Семейное положение (СП):</label>
+        <input type="text" id="maritalStatus" name="maritalStatus" required><br><br>
+
+        <label for="gender">Пол:</label>
+        <select id="gender" name="gender" required>
+            <option value="Мужской">Мужской</option>
+            <option value="Женский">Женский</option>
+        </select><br><br>
+
+        <label for="position">Должность:</label>
+        <input type="text" id="position" name="position" required><br><br>
+
+        <button type="button" onclick="submitForm()">Отправить</button>
+    </form>
+
+    <h2>Заполненная анкета:</h2>
+    <div id="output"></div>
+
+    <script src="/lb5/z1j.js">
+    </script>
+</body>
+</html>

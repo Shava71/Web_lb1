@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Динамические изображения</title>
+    <style>
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        img {
+            width: 300px;
+            transition: width 0.3s, height 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="/lb5/1.png" name="myImage" alt="Image 1" onmouseover="swapImages(0)" onclick="resizeImage(this)">
+        <img src="/lb5/2.png" name="myImage" alt="Image 2" onmouseover="swapImages(1)" onclick="resizeImage(this)">
+        <img src="/lb5/3.png" name="myImage" alt="Image 3" onmouseover="swapImages(2)" onclick="resizeImage(this)">
+    </div>
+
+    <script src="/lb5/z3j.js">
+       
+    </script>
+</body>
+</html>

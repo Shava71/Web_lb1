@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Интерактивные элементы</title>
+    <style>
+        .text {
+            font-size: 16pt;
+            color: black;
+            background-color: white;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .caption {
+            font-size: 14pt;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Текстовая строка -->
+    <div class="text" onclick="changeTextStyle()" onmouseover="changeTextStyle()">
+        Нажмите на этот текст или наведите курсор
+    </div>
+
+    <!-- Изображение и подпись -->
+    <div class="image-container">
+        <img src="/lb5/1.png" id="myImage" alt="Example Image" width="300">
+        <div id="caption" class="caption">Подпись изображения</div>
+    </div>
+
+    <script src="z4j.js">
+       
+    </script>
+
+</body>
+</html>
