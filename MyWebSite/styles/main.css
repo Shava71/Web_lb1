@@ -11,9 +11,34 @@
     transform: scale(1.2);
 }
 
+.rate-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Отключает кликабельность */
+}
+
+/* Показать кнопку при наведении на изображение */
+.books:hover .rate-btn {
+    opacity: 1;
+    pointer-events: auto; /* Включает кликабельность */
+}
+
 .btn-primary:focus {
     outline: none !important; /* Удаление обводки при фокусе */
     box-shadow: none !important; /* Удаление теней при фокусе */
+}
+
+#starRating .star {
+    font-size: 24px;
+    cursor: pointer;
+    color: gray;
+}
+#starRating .star:hover {
+    color: gold;
 }
 
 
