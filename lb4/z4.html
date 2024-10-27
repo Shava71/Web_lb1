@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка строки</title>
+</head>
+<body>
+    <h1>Проверка символа и суммы цифр</h1>
+    
+    <div>
+        <label for="inputString">Строка:</label>
+        <input type="text" id="inputString" value="abcde12345">
+    </div>
+    <div>
+        <label for="inputK">Номер символа (k):</label>
+        <input type="number" id="inputK" value="2" min="1">
+    </div>
+    
+    <button onclick="checkString()">Проверить</button>
+    
+    <h2>Результат:</h2>
+    <div id="output"></div>
+
+    <script src="/lb4/z4j.js">
+    </script>
+</body>
+</html>
