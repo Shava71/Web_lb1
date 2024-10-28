@@ -1,6 +1,6 @@
 function checkString() {
     const str = document.getElementById("inputString").value;
-    const k = parseInt(document.getElementById("inputK").value) - 1; // Преобразуем номер в индекс
+    const k = parseInt(document.getElementById("inputK").value) - 1; 
     
     // Проверка наличия символа на позиции k
     if (k < 0 || k >= str.length) {
@@ -9,13 +9,13 @@ function checkString() {
     }
     
     const charAtK = str[k];
-    const isLetter = /[a-zA-Z]/.test(charAtK); // Проверка, является ли символ буквой
+    const isLetter = /[a-zA-Z]/.test(charAtK); //Проверка, является ли символ буквой
     
-    // Суммируем все цифры в строке
+    //Суммируем все цифры в строке
     const sumOfDigits = str.split('')
-                            .filter(char => /\d/.test(char)) // Оставляем только цифры
-                            .map(Number)                     // Преобразуем в числа
-                            .reduce((sum, num) => sum + num, 0); // Суммируем
+                            .filter(char => /\d/.test(char)) //Оставляем только цифры
+                            .map(Number)                     //Преобразуем в числа
+                            .reduce((sum, num) => sum + num, 0); //Суммируем
     
     const isSumEven = sumOfDigits % 2 === 0;
     
