@@ -25,6 +25,8 @@
 
      <div style="margin-top: 56px;"> <!--class="d-flex" -->
 
+
+            <!-- SIDENAV -->
         <div class="sidenav bg-light p-3 fixed-top" id="sidenav"> 
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
@@ -56,6 +58,9 @@
             <hr>
         </div>
 
+
+
+
     <div class="container my-6 custom-margin">
         <div class="text-center ">
             <h1 class="text-black-50">Топ 3 книги недели</h1>
@@ -64,15 +69,45 @@
         <div class="row justify-content-center">
             <div class="books col-12 col-md-4 mb-3">
                 <img src="/MyWebSite/books-image/book1.webp" alt="Book 1" class="img-fluid">
+                <button class="btn btn-primary mt-2 rate-btn" data-book="1">Оценить книгу</button>
             </div>
             <div class="books col-12 col-md-4 mb-3">
                 <img src="/MyWebSite/books-image/book2.webp" alt="Book 2" class="img-fluid">
+                <button class="btn btn-primary mt-2 rate-btn" data-book="2">Оценить книгу</button>
             </div>
             <div class="books col-12 col-md-4 mb-3">
                 <img src="/MyWebSite/books-image/book3.webp" alt="Book 3" class="img-fluid">
+                <button class="btn btn-primary mt-2 rate-btn" data-book="3">Оценить книгу</button>
             </div>
         </div>
     </div>
+
+    <!-- Модальное окно для оценки -->
+<div class="modal fade" id="rateModal" tabindex="-1" aria-labelledby="rateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="rateModalLabel">Оцените книгу</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Выберите рейтинг:</p>
+                <div id="starRating">
+                    <span class="star" data-rating="1">&#9733;</span>
+                    <span class="star" data-rating="2">&#9733;</span>
+                    <span class="star" data-rating="3">&#9733;</span>
+                    <span class="star" data-rating="4">&#9733;</span>
+                    <span class="star" data-rating="5">&#9733;</span>
+                </div>
+                <p id="selectedRating" class="mt-2"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-secondary" id="saveRating">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
 
     <div class="container my-6 custom-margin">
         <h1 class="quotes text-black-50 text-center">Великие цитаты из книг:</h1>
@@ -157,6 +192,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/MyWebSite//script/rate.js"></script>
     <script src="/MyWebSite/script/sidenav.js"></script>
 </body>
 

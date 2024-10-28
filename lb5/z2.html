@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ билетов на поезд</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Форма заказа билетов на поезд</h1>
+
+    <form id="ticketForm">
+
+        <label for="trainNumber">Номер поезда:</label>
+        <input type="text" id="trainNumber" name="trainNumber" required>
+        <br>
+        <label>Категория поезда:</label>
+        <input type="radio" id="localTrain" name="trainCategory" value="Местного формирования" checked>
+        <label for="localTrain">Местного формирования</label>
+        <input type="radio" id="passingTrain" name="trainCategory" value="Проходящий">
+        <label for="passingTrain">Проходящий</label>
+        <br>
+        <label for="direction">Направление:</label>
+        <select id="direction" name="direction" onchange="populateTrainNames()" required>
+            <option value="Могилев-Минск">Могилев – Минск</option>
+            <option value="Могилев-Орша">Могилев – Орша</option>
+          
+        </select>
+        <br>
+        <label for="trainName" >Название поезда:</label>
+        <!-- <input type="text" id="trainName" name="trainName" value="Красная стрела"> -->
+        <select id="trainName" name="trainName" required>
+            <!-- Этот список будет заполняться динамически -->
+        </select>
+        <br>
+        <label for="ticketCount">Количество билетов (не более 4):</label>
+        <input type="number" id="ticketCount" name="ticketCount" min="1" max="4" value="1">
+        <br>
+        <label for="wagonClass">Класс вагона:</label>
+        <select id="wagonClass" name="wagonClass">
+            <option value="Люкс">Люкс</option>
+            <option value="Спальный">Спальный</option>
+            <option value="Купе">Купе</option>
+            <option value="Плацкарт">Плацкарт</option>
+            <option value="Общий">Общий</option>
+        </select>
+        <br>
+        <button type="button" onclick="submitForm()">Отправить заявку</button>
+    </form>
+
+    <h2>Ваш заказ:</h2>
+    <div id="orderSummary"></div>
+
+    <script src="/lb5/z2j.js">
+      
+    </script>
+</body>
+</html>
